@@ -1,5 +1,7 @@
 # Web记账应用 - 后端
 
+## [前端项目](https://github.com/Cail-Gainey/cashflow-vue)
+
 ## 项目简介
 后端采用 **Spring Boot 3** 框架，提供 **RESTful API** 接口，处理前端请求。Spring Boot 的简洁配置和强大的生态系统使得开发和部署变得更加简单。为了提高应用的性能和可扩展性，后端还使用了 **Spring Data JPA** 进行数据持久化操作，提供高效和直观的数据库操作。
 
