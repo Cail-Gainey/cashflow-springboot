@@ -1,0 +1,51 @@
+spring:
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: cailgainey@foxmail.com
+    password: itvagayrmtundhda
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: false
+          ssl:
+            enable: true
+            socketFactory:
+              class: com.sun.mail.util.MailSSLSocketFactory
+              fallback: false
+        timeout: 5000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cashflow?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+  servlet: # 文件请求的限制
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  data:
+    redis:
+      host: localhost
+      timeout: 5000
+      database: 0
+      port: 6379
+
+mybatis-plus:
+  configuration:
+    #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+    local-cache-scope: statement
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+    banner: false
+
+server:
+  port: 8080
