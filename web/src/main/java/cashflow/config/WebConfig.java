@@ -33,14 +33,12 @@ public class WebConfig implements WebMvcConfigurer {
                 //跨域允许时间
                 .maxAge(3600);
     }
-
-    @Override
+     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(jwtInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns("/api/public/*")
-                .excludePathPatterns("/files//{folder}/{filename}");
+                .excludePathPatterns("/api/verify/*")
+                .excludePathPatterns("/files/{folder}/{filename}");
     }
-
-
 }
